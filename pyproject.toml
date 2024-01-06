@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "health-sms"
+version = "0.1.0"
+description = "SMS powered tool for storing and retrieving your health-based data."
+authors = ["wookiee89 <jay.r.jain@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "health_sms"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.108.0"
+uvicorn = "^0.25.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
