@@ -5,7 +5,7 @@ FROM python:3.11.0-slim-buster
 ENV PYTHONUNBUFFERED 1
 
 # Create and set the working directory in the container
-WORKDIR /app/api
+WORKDIR /app
 
 # Copy the Poetry lock and pyproject.toml files and install dependencies
 COPY pyproject.toml poetry.lock /app/
@@ -20,4 +20,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Start the FastAPI application using Uvicorn
-CMD ["uvicorn", "asgi:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["uvicorn", "asgi:api", "--host", "0.0.0.0", "--port", "8000", "--reload"]
